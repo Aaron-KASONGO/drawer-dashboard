@@ -1,8 +1,10 @@
 import MuiAppBar from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import { IconButton, Typography } from '@mui/material';
+import { Badge, IconButton, Typography, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
+
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 const drawerWidth = 240;
 
@@ -27,19 +29,43 @@ const AppBar = styled(MuiAppBar, {
 export const ToolBar = ({open, handleDrawerOpen}) => {
   return (
       <AppBar position="fixed" open={open}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+        <Toolbar
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between'
+        }}
+        >
+          <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center'
+          }}
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Persisten
-          </Typography>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" noWrap component="div">
+              Persisten
+            </Typography>
+          </Box>
+          <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center'
+          }}
+          >
+            <IconButton>
+              <Badge badgeContent={4} color='error'>
+                <NotificationsIcon />
+              </Badge>
+            </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
   )
