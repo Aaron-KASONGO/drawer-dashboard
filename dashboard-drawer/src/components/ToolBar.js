@@ -1,7 +1,6 @@
 import MuiAppBar from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import { Badge, IconButton, Typography, Box } from '@mui/material';
+import { Badge, IconButton, Typography, Box, Toolbar } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 import NotificationsIcon from '@mui/icons-material/Notifications';
@@ -62,7 +61,7 @@ export const ToolBar = ({open, handleDrawerOpen}) => {
           >
             <IconButton>
               <Badge badgeContent={4} color='error'>
-                <NotificationsIcon />
+                <NotificationsIcon /> 
               </Badge>
             </IconButton>
           </Box>
