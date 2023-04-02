@@ -6,8 +6,9 @@ import { ToolBar } from './components/ToolBar';
 import { DrawerSide } from './components/Drawer';
 
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom'
-import Home from './components/Content/Home';
 import { HomePage } from './components/Content/HomePage';
+import { FilePage } from './components/Content/FilePage';
+import { MessagePage } from './components/Content/MessagePage';
 
 
 const drawerWidth = 240;
@@ -30,9 +31,20 @@ const App = () => {
         <CssBaseline />
         <ToolBar open={open} handleDrawerOpen={handleDrawerOpen}/>
         <DrawerSide open={open} handleDrawerClose={handleDrawerClose} theme={theme} />
-        <HomePage />
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<HomePage open={open} />} />
+            <Route path='/file' element={<FilePage open={open} />} />
+            <Route path='messages' element={<MessagePage open={open} />} />
+          </Route>
+        </Routes>
       </Box>
     </Router>
   );
 }
+
+const Layout = () => {
+  return <Outlet />
+}
+
 export default App;

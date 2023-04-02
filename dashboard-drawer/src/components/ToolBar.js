@@ -4,6 +4,7 @@ import { Badge, IconButton, Typography, Box, Toolbar } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import MessageIcon from '@mui/icons-material/Message';
 
 const drawerWidth = 240;
 
@@ -62,6 +63,12 @@ export const ToolBar = ({open, handleDrawerOpen}) => {
             <IconButton>
               <Badge badgeContent={4} color='error'>
                 <NotificationsIcon /> 
+              </Badge>
+            </IconButton>
+
+            <IconButton>
+              <Badge badgeContent={4} color='error'>
+                <MessageIcon /> 
               </Badge>
             </IconButton>
           </Box>

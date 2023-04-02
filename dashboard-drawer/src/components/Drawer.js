@@ -12,12 +12,13 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
 import HomeIcon from '@mui/icons-material/Home';
-import FolderIcon from '@mui/icons-material/Folder';
-import EmailIcon from '@mui/icons-material/Email';
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import LeaderboardIcon from '@mui/icons-material/Leaderboard';
+import ChairIcon from '@mui/icons-material/Chair';
+import ApartmentIcon from '@mui/icons-material/Apartment';
+import UpdateIcon from '@mui/icons-material/Update';
+import Groups2Icon from '@mui/icons-material/Groups2';
+import LogoutIcon from '@mui/icons-material/Logout';
 import { Avatar, Box, Drawer, styled } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -70,57 +71,61 @@ export const DrawerSide = ({open, handleDrawerClose, theme}) => {
         </Box>
         <Divider />
         <List>
+            <Link to='/' underline='none'>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <HomeIcon />
+                  </ListItemIcon>
+                  <ListItemText primary='Acceuil' />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+            <Link to='/file'>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <ChairIcon />
+                  </ListItemIcon>
+                  <ListItemText primary='Réservations' />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+            <Link to='/messages'>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <ApartmentIcon />
+                  </ListItemIcon>
+                  <ListItemText primary='Salles' />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <HomeIcon />
+                  <UpdateIcon />
                 </ListItemIcon>
-                <ListItemText primary='Home' />
+                <ListItemText primary='Historique' />
               </ListItemButton>
             </ListItem>
 
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <FolderIcon />
+                  <Groups2Icon />
                 </ListItemIcon>
-                <ListItemText primary='File' />
+                <ListItemText primary='Clients' />
               </ListItemButton>
             </ListItem>
 
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <EmailIcon />
+                  <LogoutIcon />
                 </ListItemIcon>
-                <ListItemText primary='Message' />
-              </ListItemButton>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <NotificationsActiveIcon />
-                </ListItemIcon>
-                <ListItemText primary='Notification' />
-              </ListItemButton>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <LocationOnIcon />
-                </ListItemIcon>
-                <ListItemText primary='Location' />
-              </ListItemButton>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <LeaderboardIcon />
-                </ListItemIcon>
-                <ListItemText primary='Data' />
+                <ListItemText primary='Se déconnecter' />
               </ListItemButton>
             </ListItem>
         </List>
