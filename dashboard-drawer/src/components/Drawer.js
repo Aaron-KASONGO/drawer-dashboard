@@ -82,7 +82,7 @@ export const DrawerSide = ({open, handleDrawerClose, theme}) => {
                 </ListItemButton>
               </ListItem>
             </Link>
-            <Link to='/file'>
+            <Link to='/reservations'>
               <ListItem disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
@@ -92,7 +92,7 @@ export const DrawerSide = ({open, handleDrawerClose, theme}) => {
                 </ListItemButton>
               </ListItem>
             </Link>
-            <Link to='/messages'>
+            <Link to='/salles'>
               <ListItem disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
@@ -102,24 +102,26 @@ export const DrawerSide = ({open, handleDrawerClose, theme}) => {
                 </ListItemButton>
               </ListItem>
             </Link>
-
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <UpdateIcon />
-                </ListItemIcon>
-                <ListItemText primary='Historique' />
-              </ListItemButton>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Groups2Icon />
-                </ListItemIcon>
-                <ListItemText primary='Clients' />
-              </ListItemButton>
-            </ListItem>
+            <Link to='/historique'>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <UpdateIcon />
+                  </ListItemIcon>
+                  <ListItemText primary='Historique' />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+            <Link to='/clients'>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <Groups2Icon />
+                  </ListItemIcon>
+                  <ListItemText primary='Clients' />
+                </ListItemButton>
+              </ListItem>
+            </Link>
 
             <ListItem disablePadding>
               <ListItemButton>
