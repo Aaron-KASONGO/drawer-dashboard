@@ -11,6 +11,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
+
 import HomeIcon from '@mui/icons-material/Home';
 import ChairIcon from '@mui/icons-material/Chair';
 import ApartmentIcon from '@mui/icons-material/Apartment';
@@ -71,13 +72,13 @@ export const DrawerSide = ({open, handleDrawerClose, theme}) => {
         </Box>
         <Divider />
         <List>
-            <Link to='/' underline='none'>
+            <Link to='/'>
               <ListItem disablePadding>
-                <ListItemButton>
+                <ListItemButton component='div'>
                   <ListItemIcon>
                     <HomeIcon />
                   </ListItemIcon>
-                  <ListItemText primary='Acceuil' />
+                  <ListItemText primary={<Typography comp>Acceuil</Typography>} />
                 </ListItemButton>
               </ListItem>
             </Link>

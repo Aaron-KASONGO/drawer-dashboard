@@ -7,7 +7,7 @@ import { DrawerSide } from './components/Drawer';
 
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom'
 import { HomePage } from './components/Content/HomePage';
-import { FilePage } from './components/Content/FilePage';
+import { ReservationPage } from './components/Content/ReservationPage';
 import { MessagePage } from './components/Content/MessagePage';
 
 
@@ -34,7 +34,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<HomePage open={open} />} />
-            <Route path='/file' element={<FilePage open={open} />} />
+            <Route path='/file' element={<ReservationPage open={open} />} />
             <Route path='messages' element={<MessagePage open={open} />} />
           </Route>
         </Routes>
