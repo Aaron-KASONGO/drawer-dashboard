@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ToolBar } from './components/ToolBar';
@@ -10,9 +10,9 @@ import { HomePage } from './components/Content/HomePage';
 import { ReservationPage } from './components/Content/ReservationPage';
 import { SallesPages } from './components/Content/SallesPages';
 import { HistoriquePage } from './components/Content/HistoriquePage';
+import { ClientPage } from './components/Content/ClientPage';
 
 
-const drawerWidth = 240;
 
 const App = () => {
   const theme = useTheme();
@@ -38,7 +38,7 @@ const App = () => {
             <Route path='reservations' element={<ReservationPage open={open} />} />
             <Route path='salles' element={<SallesPages open={open} />} />
             <Route path='historique' element={<HistoriquePage open={open} />} />
-            <Route path='clients' element={<SallesPages open={open} />} />
+            <Route path='clients' element={<ClientPage open={open} />} />
           </Route>
         </Routes>
       </Box>
