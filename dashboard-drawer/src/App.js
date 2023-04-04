@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom
 import { HomePage } from './components/Content/HomePage';
 import { ReservationPage } from './components/Content/ReservationPage';
 import { SallesPages } from './components/Content/SallesPages';
+import { HistoriquePage } from './components/Content/HistoriquePage';
 
 
 const drawerWidth = 240;
@@ -36,7 +37,7 @@ const App = () => {
             <Route index element={<HomePage open={open} />} />
             <Route path='reservations' element={<ReservationPage open={open} />} />
             <Route path='salles' element={<SallesPages open={open} />} />
-            <Route path='historique' element={<SallesPages open={open} />} />
+            <Route path='historique' element={<HistoriquePage open={open} />} />
             <Route path='clients' element={<SallesPages open={open} />} />
           </Route>
         </Routes>
